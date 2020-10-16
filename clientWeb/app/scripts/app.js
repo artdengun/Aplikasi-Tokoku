@@ -1,5 +1,4 @@
 'use strict';
-
 /**
  * @ngdoc overview
  * @name clientWebApp
@@ -28,6 +27,21 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl',
         controllerAs: 'about'
+      })
+      .when('/product', {
+        templateUrl: 'views/product.html',
+        controller: 'ProductCtrl',
+        controllerAs: 'product'
+      })
+      .when('/form', {
+        templateUrl: 'views/form.html',
+        controller: 'FormCtrl',
+        controllerAs: 'form'
+      })
+      .when('/upload', {
+        templateUrl: 'views/upload.html',
+        controller: 'UploadCtrl',
+        controllerAs: 'upload'
       })
       .otherwise({
         redirectTo: '/'
