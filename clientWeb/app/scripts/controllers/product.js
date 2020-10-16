@@ -8,10 +8,6 @@
  * Controller of the clientWebApp
  */
 angular.module('clientWebApp')
-  .controller('ProductCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('ProductCtrl', function ($scope, ProductService) {
+      $scope.products = ProductService.query();
   });

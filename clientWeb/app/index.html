@@ -54,14 +54,34 @@
     </div>
 
     <div class="container">
-    <div ng-view=""></div>
+      <h1>ListProduct</h1>
+        <div class="row">
+          <table class="table table-hoover">        
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Nama</th>
+              <th>Deskripsi</th>
+              <th>Vendor</th>
+              <th>Berat</th>
+              <th>Harga</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="index in products">
+                <td>{{index.productId}}</td>
+                <td>{{product.name}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.vendor}}</td>
+                <td>{{product.weight}}</td>
+                <td>{{product.price}}</td>
+              </tr>
+          </tbody>
+        </table>
+        </div>
     </div>
 
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -96,6 +116,9 @@
         <script src="scripts/controllers/product.js"></script>
         <script src="scripts/controllers/form.js"></script>
         <script src="scripts/controllers/upload.js"></script>
+        <script src="scripts/services/productservice.js"></script>
+        <script src="scripts/services/uploadservice.js"></script>
+        <script src="scripts/services/formservice.js"></script>
         <!-- endbuild -->
 </body>
 </html>
